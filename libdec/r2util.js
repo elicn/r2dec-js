@@ -191,7 +191,8 @@ module.exports = (function() {
             };
             this.extra = {
                 theme: r2str('e r2dec.theme'),
-                debug: has_option(args, '--debug')
+                debug: has_option(args, '--debug'),
+                utf8: r2bool('e scr.utf8')
             };
         },
         data: function() {

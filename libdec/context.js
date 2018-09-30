@@ -130,7 +130,8 @@ module.exports = (function() {
             if (Global.evars.honor.assembly && !Global.evars.honor.blocks) {
                 string_to_print = string_to_print || '';
                 size_no_colors = size_no_colors || 0;
-                return h('    ') + string_to_print + this.identAsm.substring(size_no_colors, this.identAsm.length) + h(' | ') + ident;
+                var vbar = Global.evars.extra.utf8 ? '\u2502' : '|';
+                return h('    ') + string_to_print + this.identAsm.substring(size_no_colors, this.identAsm.length) + h(' ' + vbar + ' ') + ident;
             }
             return ident;
         };
